@@ -1,2 +1,24 @@
-# powerbi-practicas
-Conjunto de 4 dashboards realizados a modo de practica
+# Proyectos Power BI
+
+
+Conjunto de dashboards realizados con fines de afianzar y demostrar habilidades clave en **Power BI**.
+
+Este repositorio contiene **4 dashboards** independientes, cada uno enfocado en practicar diferentes aspectos de Power BI (ventas, finanzas,productividad,).  
+
+
+## ✨ Habilidades desarrolladas
+
+- **Power BI** 
+- **Power Query** 
+- **DAX** 
+- **Modelado de datos** 
+- **Limpieza y preparación de datos** 
+
+
+## 📸 Dashboards incluidos
+
+Cada dashboard tiene su propia carpeta dedicada con todo lo necesario para entender y reproducirlo:
+
+- **Datos originales** → Archivos fuente (CSV, Excel, etc.) usados para la carga.
+- **Archivo Power BI (.pbix)** → El reporte completo.
+- **README.md específico** → Documentacion detallada del proceso realizado en cada uno.
