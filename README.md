@@ -5,6 +5,22 @@ Conjunto de dashboards realizados con fines de afianzar y demostrar habilidades 
 
 Este repositorio contiene **4 dashboards** independientes, cada uno enfocado en practicar diferentes aspectos de Power BI (ventas, finanzas,productividad,).  
 
+<table>
+  <tr>
+    <td align="center">
+      <figure>
+        <img src="Ventas%20Tech/Ventastech.png" width="90%">
+        <figcaption>Ventas Tech</figcaption>
+      </figure>
+    </td>
+    <td align="center">
+      <figure>
+        <img src="Productividad/Productividad.png" width="90%">
+        <figcaption>Productividad</figcaption>
+      </figure>
+    </td>
+  </tr>
+</table>
 
 ## ✨ Habilidades desarrolladas
 
