@@ -64,7 +64,3 @@ Gráfico de barras que segmenta las ventas según el valor del cliente:
 Gráfico de área/línea que muestra la **evolución mensual de las ventas** a lo largo del año (de enero a diciembre), permitiendo identificar tendencias estacionales y picos de actividad comercial.
 
 ---
-
-### 🛠️ Herramienta
-
-Este dashboard fue desarrollado con **Microsoft Power BI Desktop** (archivo `.pbix`).
