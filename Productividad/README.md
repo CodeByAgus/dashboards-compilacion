@@ -1,12 +1,8 @@
 # Dashboard de Reporte de Producción
 
-<<<<<<< HEAD
 ![Reporte de Producción](./Productividad.png)
 
 Este dashboard presenta un **análisis general de la producción**, permitiendo visualizar la calidad, productividad, obstáculos operativos, evolución mensual y distribución geográfica de las horas productivas y no productivas.
-=======
-Este dashboard presenta un **análisis general de la producción**, permitiendo visualizar la calidad, productividad, obstáculos operativos, evolución mensual y distribución geográfica de las horas productivas.
->>>>>>> 9690d3a496e75306e8a906a1dcc9c954ea7adbdd
 
 ---
 
@@ -73,11 +69,3 @@ Tabla que lista los obstáculos operativos más frecuentes y la cantidad de órd
 Gráfico de líneas que muestra la **evolución mensual de piezas producidas** a lo largo del año (de enero a diciembre), permitiendo identificar picos y caídas en la producción.
 
 ---
-
-### 🛠️ Herramienta
-
-Este dashboard fue desarrollado con **Microsoft Power BI Desktop** (archivo `.pbix`).
-=======
-#### 4. Top 5 Principales Obstáculos
-Tabla resumen con los obstáculos más frecuentes y el número de órdenes afectadas por cada uno.
->>>>>>> 9690d3a496e75306e8a906a1dcc9c954ea7adbdd
