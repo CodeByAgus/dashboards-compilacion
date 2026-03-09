@@ -57,7 +57,3 @@ Tabla resumen con el total facturado y el porcentaje de contribución de cada a�
 | **Total** | **$6.997.602**   | **100,00%**  |
 
 ---
-
-### 🛠️ Herramienta
-
-Este dashboard fue desarrollado con **Microsoft Power BI Desktop** (archivo `.pbix`).
