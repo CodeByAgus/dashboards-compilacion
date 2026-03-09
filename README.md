@@ -7,17 +7,21 @@ Este repositorio contiene **4 dashboards** independientes, cada uno enfocado en 
 
 <table>
   <tr>
-    <td align="center">
-      <figure>
-        <img src="Ventas%20Tech/Ventastech.png" width="90%">
-        <figcaption>Ventas Tech</figcaption>
-      </figure>
+    <td align="center" width="25%">
+      <img src="Ventas%20Tech/Ventastech.png" width="320px"><br/>
+      <b>Ventas Tech</b>
     </td>
-    <td align="center">
-      <figure>
-        <img src="Productividad/Productividad.png" width="90%">
-        <figcaption>Productividad</figcaption>
-      </figure>
+    <td align="center" width="25%">
+      <img src="Productividad/Productividad.png" width="320px"><br/>
+      <b>Productividad</b>
+    </td>
+    <td align="center" width="25%">
+      <img src="Resumen%20Financiero/Resumen%20financiero.png" width="320px"><br/>
+      <b>Resumen Financiero</b>
+    </td>
+    <td align="center" width="25%">
+      <img src="Bancario/Analisis%20Bancario.png" width="320px"><br/>
+      <b>Análisis Bancario</b>
     </td>
   </tr>
 </table>
