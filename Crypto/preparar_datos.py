@@ -115,26 +115,47 @@ def main():
     df = calcular_retorno_acumulado(df)
     df_resumen = construir_tabla_resumen(df)
 
-    cols_hist = ['fecha', 'crypto', 'open', 'high', 'low', 'close',
-                 'retorno_diario_pct', 'retorno_7d_pct', 'retorno_30d_pct',
-                 'retorno_acumulado_pct', 'volatilidad_30d',
-                 'max_52s', 'min_52s', 'anio', 'mes', 'mes_nombre', 'trimestre']
-    cols_hist = [c for c in cols_hist if c in df.columns]
+    cols = ['fecha', 'crypto', 'open', 'high', 'low', 'close',
+            'retorno_diario_pct', 'retorno_7d_pct', 'retorno_30d_pct',
+            'retorno_acumulado_pct', 'volatilidad_30d',
+            'max_52s', 'min_52s', 'anio', 'mes', 'mes_nombre', 'trimestre']
+    cols = [c for c in cols if c in df.columns]
 
-    df[cols_hist].to_excel('data/powerbi/historico_precios.xlsx', index=False)
-    df_resumen.to_excel('data/powerbi/resumen_cryptos.xlsx', index=False)
+    r_hist    = 'data/powerbi/historico_precios.xlsx'
+    r_resumen = 'data/powerbi/resumen_cryptos.xlsx'
 
+    for r in [r_hist, r_resumen]:
+        if os.path.exists(r):
+            print(f'[AVISO] Sobreescribiendo: {r}')
+
+    df[cols].to_excel(r_hist, index=False)
+    assert os.path.exists(r_hist), f'ERROR: no se generó {r_hist}'
+
+    df_resumen.to_excel(r_resumen, index=False)
+    assert os.path.exists(r_resumen), f'ERROR: no se generó {r_resumen}'
+
+    vol_rows = 0
     if 'volume' in df.columns:
+        r_vol = 'data/powerbi/volumen_mensual.xlsx'
+        if os.path.exists(r_vol):
+            print(f'[AVISO] Sobreescribiendo: {r_vol}')
         vol_mensual = df.groupby(['crypto', 'anio', 'mes', 'mes_nombre']).agg(
             volumen_total=('volume', 'sum'),
             precio_promedio=('close', 'mean')
         ).reset_index()
-        vol_mensual.to_excel('data/powerbi/volumen_mensual.xlsx', index=False)
+        vol_mensual.to_excel(r_vol, index=False)
+        assert os.path.exists(r_vol), f'ERROR: no se generó {r_vol}'
+        vol_rows = len(vol_mensual)
 
-    print('\nArchivos generados en data/powerbi/:')
-    print('  historico_precios.xlsx  — tabla principal')
-    print('  resumen_cryptos.xlsx    — KPIs por crypto')
-    print('  volumen_mensual.xlsx    — volumen agregado')
+    n_cryptos = df['crypto'].nunique()
+    print('\n=== ACCOUNTING ===')
+    print(f'Cryptos procesadas  : {n_cryptos} de {len(CRYPTOS)}')
+    print(f'Filas históricas    : {len(df[cols]):,}')
+    print(f'Filas resumen       : {len(df_resumen):,}')
+    print(f'Filas vol. mensual  : {vol_rows:,}')
+    print(f'Rango de fechas     : {df["fecha"].min().date()} → {df["fecha"].max().date()}')
+    print(f'\n  {r_hist}')
+    print(f'  {r_resumen}')
     print('\nEn Power BI: Obtener datos → Excel → seleccionar cada archivo')
 
 
